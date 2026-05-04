@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Сашенька, с днём рождения</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffb6c1, #fff0f5, #ffb6c1, #fff0f5);
+            background-size: 300% 300%;
+            animation: gradientFlow 10s ease infinite;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(12px);
+            border: 2px solid #fff;
+            border-radius: 40px;
+            max-width: 700px;
+            width: 100%;
+            padding: 30px 25px;
+            color: #fff;
+            box-shadow: 0 0 50px rgba(255,255,255,0.3);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .heart-button {
+            text-align: center;
+            font-size: 2rem;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            display: inline-block;
+            margin: 20px auto;
+            padding: 12px 32px;
+            border-radius: 60px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .heart-button:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            line-height: 1.55;
+            font-size: 0.95rem;
+        }
+
+        .hidden-content.active {
+            display: block;
+            animation: fadeSlide 0.8s ease-out;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .video-container {
+            margin: 30px 0 20px;
+            text-align: center;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 25px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+
+        .love-end {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .big-heart {
+            font-size: 5.5rem;
+            background: linear-gradient(135deg, #ff6699, #ff99cc, #ffffff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            animation: heartbeat 1.2s ease infinite;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .press-enter-wrap {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>С днём рождения, Сашенька</h1>
+    <div class="press-enter-wrap">
+        <div class="heart-button" id="enterBtn"><3</div>
+    </div>
+    <div id="hiddenContent" class="hidden-content">
+        <p>Сашенька, котёнок мой любимый, самый родной мой человечек, с днём рождения!</p>
+        <p>Я сейчас сижу и смотрю на часы, и у меня внутри всё переворачивается от того, что ещё два часа — и наступит твой день. Твой личный праздник. Тот самый момент, когда весь мир должен замереть и сказать тебе спасибо за то, что ты есть. И я хочу, чтобы прямо с первой секунды, с первой минуты твоего нового года ты почувствовала, как сильно я тебя люблю.</p>
+        <p>Я люблю тебя всем сердцем. По-настоящему. Глубоко. Так, что иногда сам не понимаю, как жил без этого раньше. Каждой клеточкой, каждой мыслью, каждым своим днём — я твой. Ты живёшь во мне где-то под рёбрами, в самом тёплом месте, и я ношу тебя там всегда. Даже когда мы далеко, даже когда просто молчим рядом — ты внутри меня. И это самое лучшее чувство на свете.</p>
+        <p>Саша, ты мой котёнок. Мой маленький, тёплый, ласковый котёнок, которого хочется обнимать и никогда не отпускать. Хочется укрывать пледом, целовать в нос, в щёки, в макушку, гладить по голове и слушать, как ты мурлычешь от счастья. Ты самый родной человек на этой земле для меня. Я никогда никого не любил так, как тебя. И, честно, никогда не смогу полюбить кого-то сильнее. Потому что ты — это ты. Моя девочка. Моя любимая девочка, которая перевернула весь мой мир и сделала его цветным.</p>
+        <p>Знаешь, что я понял за время, что мы вместе? Что счастье — это не какие-то великие события. Это когда ты ложишься рядом. Когда ты просыпаешься и сразу начинаешь что-то рассказывать. Когда ты смеёшься над моими глупыми шутками. Когда ты кладёшь голову мне на плечо и тихо вздыхаешь. Это всё ты. Моё счастье в одном человеке. В тебе.</p>
+        <p>Котёнок, в этот твой новый год я желаю тебе всего, чего ты сама себе желаешь тихим голосом, когда остаёшься одна. Пусть у тебя будет столько радости, чтобы её хватило на всех вокруг. Пусть здоровье будет крепким-крепким, а слёзы — только от смеха. Пусть все твои мечты — даже самые смешные и невероятные — однажды просто возьмут и сбудутся. Просто потому что ты этого заслуживаешь. Ты заслуживаешь весь мир, Саша. Серьёзно. Весь мир и ещё чуть-чуть сверху.</p>
+        <p>Я обещаю тебе, что буду рядом. В хорошие дни — чтобы радоваться с тобой. В плохие дни — чтобы обнимать и говорить, что всё пройдёт. Буду смешить тебя, когда грустно. Буду молчать, когда нужно просто быть рядом. Буду любить тебя каждый день — не только в праздники. Утром, днём, ночью, в дождь, в снег, в солнце. Всегда.</p>
+        <p>С первыми минутами твоего дня рождения, моя любимая Саша. С первыми секундами твоего нового года жизни. Будь самой счастливой. Потому что ты — самое лучшее, что случалось со мной в этой жизни.</p>
+
+        <div class="video-container">
+            <video controls autoplay muted loop playsinline>
+                <source src="lv_0_20260503123240.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+        <div class="love-end" id="heartContainer" style="display: none;">
+            <div class="big-heart">❤️</div>
+            <div style="margin-top: 12px; font-size: 1rem;">Я люблю тебя, котёнок, всем сердцем. С днём рождения!</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let audio = null;
+    function playMusic() {
+        if (audio) return;
+        audio = new Audio('song.mp3');
+        audio.loop = true;
+        audio.volume = 0.3;
+        audio.play().catch(e => console.log('музыка не загрузилась'));
+    }
+
+    const btn = document.getElementById('enterBtn');
+    const hiddenDiv = document.getElementById('hiddenContent');
+    const heartContainer = document.getElementById('heartContainer');
+
+    function reveal() {
+        hiddenDiv.classList.add('active');
+        playMusic();
+        const video = document.querySelector('video');
+        if (video) video.play().catch(e => console.log('видео не запустилось'));
+        setTimeout(() => {
+            heartContainer.style.display = 'block';
+        }, 1000);
+    }
+
+    btn.addEventListener('click', reveal);
+    document.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') reveal();
+    });
+</script>
+</body>
+</html>
